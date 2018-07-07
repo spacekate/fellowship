@@ -12,14 +12,14 @@ $(document).ready(function() {
             var newFellow = $("<div>").attr("id", fellowData["id"]).addClass("col-md-6 col-lg-4 fellow");
             var name = $("<p>").text(fellowData['name']['first'] + " " + fellowData['name']['last']);
             var fellowship = $("<p>").text(fellowData['fellowship']);
-            var age = $("<p>").text(fellowData['age']);
+            var age = $("<p>").text("age: " + fellowData['age']);
             var email = $("<a>").text(fellowData['email']).attr("href", "mailto:" + fellowData['email']);
             var about = $("<p>").text(fellowData['about']);
-            var isActive = false;
+            var isActive = "not active";
             if (fellowData['isActive'] == "true") {
-                isActive = true;
+                isActive = "active";
             }
-            $(newFellow).append(name).append(age).append(email);
+            $(newFellow).append(name).append(fellowship).append(age).append(email).append(isActive).append(about);
             $(this).append(newFellow);
         }
     });
