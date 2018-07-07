@@ -154,6 +154,8 @@ header.masthead .bg-circle-4 {
 
 /* Fellow styles */
 #fellows {
+    display: table;
+    vertical-align: top;
 }
 div.fellow {
     margin: 1em;
