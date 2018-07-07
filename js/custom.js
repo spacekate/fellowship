@@ -80,7 +80,7 @@ $(document).ready(function() {
         refreshFellows(filteredData);
     });
 
-    $("#filter").submit(function() {
+    $("#filter").submit(function(event) {
         event.preventDefault();
 
         var filterType = ($("#filterBy option:selected").val());
