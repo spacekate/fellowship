@@ -158,10 +158,12 @@ header.masthead .bg-circle-4 {
     vertical-align: top;
 }
 div.fellow {
+    display: table-cell;
     margin: 1em;
     padding: 1em;
     border: 1px solid #eee;
 }
 .text-muted .fellow {
     background: #f6f6f6;
+    color: #bbb;
 }
