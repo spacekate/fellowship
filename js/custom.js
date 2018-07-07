@@ -17,7 +17,7 @@ $(document).ready(function() {
             var email = $("<a>").text(fellowData['email']).attr("href", "mailto:" + fellowData['email']);
             var about = $("<p>").text(fellowData['about']);
             alert(fellowData['isActive']);
-            if (fellowData['isActive'] != true) {
+            if (fellowData['isActive'] == "false") {
                 $(newFellow).addClass("inactive");
             }
             $(newFellow).append(fellowBody);
