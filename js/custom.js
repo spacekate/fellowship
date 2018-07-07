@@ -13,14 +13,8 @@ $(document).ready(function() {
             $("#fellows").append($("div", { "id": this["id"]}));
 
             $("#"+this["id"]).append(
-                $("<p>")
-                    .text(this['name']['first'] + " " + this['name']['last'])
-            );
+                $("<p>", { "text":  this['name']['first'] + " " + this['name']['last'] }));
 
-            $("#"+this["id"]).append(
-                $("<span>")
-                    .text(this['age'])
-            );
         });
     });
 });
