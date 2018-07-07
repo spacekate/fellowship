@@ -11,7 +11,7 @@ $(document).ready(function() {
 
         $.each(data, function() {
 
-            $("#fellows").append($("<span>", {innerHTML: this['age']}));
+            $("#fellows").append($("<span>", {text: this['age']}));
         });
     });
 });
