@@ -154,7 +154,7 @@ header.masthead .bg-circle-4 {
 
 /* Fellow styles */
 div.fellow {
-    box-sizing: border-box;
+    margin: 1em;
     padding: 1em;
     border: 1px solid #eee;
 }

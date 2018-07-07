@@ -9,7 +9,8 @@
 $(document).ready(function() {
     $.fn.extend( {
         appendFellow: function (fellowData) {
-            var newFellow = $("<div>").attr("id", fellowData["id"]).addClass("col-md-6 col-lg-4 fellow");
+            var newFellow = $("<div>").attr("id", fellowData["id"]).addClass("col-md-6 col-lg-4");
+            var fellowBody = $("<div>").addClass("fellow");
             var name = $("<p>").text(fellowData['name']['first'] + " " + fellowData['name']['last']);
             var fellowship = $("<p>").text(fellowData['fellowship']);
             var age = $("<p>").text("age: " + fellowData['age']);
@@ -19,7 +20,8 @@ $(document).ready(function() {
             if (fellowData['isActive'] == "true") {
                 isActive = "active";
             }
-            $(newFellow).append(name).append(fellowship).append(age).append(email).append(isActive).append(about);
+            $(newFellow).append(fellowBody);
+            $(fellowBody).append(name).append(fellowship).append(age).append(email).append(isActive).append(about);
             $(this).append(newFellow);
         }
     });
