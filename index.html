@@ -57,6 +57,19 @@
 
     <section>
       <div class="container">
+        <div>
+          <form name="filter">
+            <div class="input-group">
+              <label for="filterBy">Filter by: </label>
+              <select name="filterBy" id="filterBy">
+                <option value="0">-- please choose --</option>
+                <option value="fellowship">Fellowship</option>
+                <option value="active">Active/Inactive</option>
+                <option value="alphabetically">Alphabetically</option>
+              </select>
+            </div>
+          </form>
+        </div>
         <div class="row align-items-center" id="fellows">
         </div>
       </div>
