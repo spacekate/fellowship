@@ -10,14 +10,8 @@ $(document).ready(function() {
     $.getJSON("/fellowship/fellows_dataset.json", function(data){
 
         $.each(data, function() {
-            var $fellow = $("<div>", {id: this['id']});
-            var $activityIndicator = $("<p>", {innerHTML: this['isActive']});
-            var $age = $("<span>", {innerHTML: this['age']});
 
-            $fellow.append($activityIndicator);
-            $fellow.append($age);
-
-            $("#fellows").append($fellow);
+            $("#fellows").append($("<span>", {innerHTML: this['age']}));
         });
     });
 });
