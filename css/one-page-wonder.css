@@ -103,6 +103,7 @@ header.masthead .masthead-content .masthead-subheading {
 #fellows {
 }
 div.fellow {
+    position: relative;
     margin: 1em;
     padding: 1em;
     border: 1px solid rgba(23, 134, 251, 0.17);
@@ -111,6 +112,12 @@ div.fellow {
 .text-muted .fellow {
     background: #f6f6f6;
     color: #aaa;
+    border: #eee;
+}
+div.fellow span.status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 .filter-controls {

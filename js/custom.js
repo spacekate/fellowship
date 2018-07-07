@@ -25,9 +25,14 @@ $(document).ready(function() {
                 .attr("href", "mailto:" + fellowData['email']);
             var about = $("<p>")
                 .text(fellowData['about']);
+            var isActive = $("<span>")
+                .addClass("status");
 
             if (!fellowData['isActive']) {
                 $(newFellow).addClass("text-muted");
+                isActive.text("inactive");
+            } else {
+                isActive.text("active");
             }
 
             $(newFellow).append(fellowBody);
@@ -36,7 +41,8 @@ $(document).ready(function() {
                 .append(fellowship)
                 .append(age)
                 .append(about)
-                .append($("<p>").text("email: ").append(email));
+                .append($("<p>").text("email: ").append(email))
+                .append(isActive);
             $(this).append(newFellow);
         }
     });
