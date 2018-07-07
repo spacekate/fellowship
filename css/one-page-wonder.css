@@ -160,7 +160,7 @@ div.fellow {
     padding: 1em;
     border: 1px solid #eee;
 }
-div.inactive .fellow {
+.muted .fellow {
     background: #f6f6f6;
     color: #ccc;
 }
