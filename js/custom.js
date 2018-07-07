@@ -16,7 +16,7 @@ $(document).ready(function() {
     $.getJSON("/fellowship/fellows_dataset.json", function(data){
 
         $.each(data, function() {
-            $("#fellows").append(this.createFellow());
+            $("#fellows").append($(this).createFellow());
         });
     });
 });
