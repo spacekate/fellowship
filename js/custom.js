@@ -10,7 +10,7 @@ $(document).ready(function() {
     $.getJSON("/fellowship/fellows_dataset.json", function(data){
         var fellow;
 
-        $.each(fellows, function(key, value) {
+        $.each(data, function(key, value) {
             alert("key = " + key + " /nvalue = " + value);
             fellow = jQuery.parseJSON(value);
             console.log(fellow);
