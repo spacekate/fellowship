@@ -56,22 +56,30 @@
     </section>
 
     <section>
-      <div class="container">
-        <div>
+      <div class="container content">
           <form name="filter">
-              <div class="col-lg-10 offset-lg-1">
-                  <div class="input-group filter-controls">
-                      <select class="p-2" name="filterBy" id="filterBy">
-                          <option value="0">-- filter by --</option>
-                          <option value="fellowship">Fellowship</option>
-                          <option value="active">Active/Inactive</option>
-                          <option value="alphabetically">Alphabetically</option>
-                      </select>
-                      <button type="submit" class="btn btn-primary p-2">filter</button>
+              <div class="row">
+                  <div class="col-md-6 col-lg-5 offset-lg-1">
+                      <div class="input-group filter-controls">
+                          <select class="form-control form-control-sm" name="filterBy" id="filterBy">
+                              <option value="0">-- filter by --</option>
+                              <option value="fellowship">Fellowship</option>
+                              <option value="active">Active/Inactive</option>
+                              <option value="alphabetically">Alphabetically</option>
+                          </select>
+                          <button type="button" name="filter-button" id="filter-button"
+                                  class="btn btn-secondary btn-sm">filter</button>
+                      </div>
+                  </div>
+                  <div class="col-md-6 col-lg-5">
+                      <div class="input-group filter-controls">
+                          <input type="text" class="form-control form-control-sm" name="seachFor" id="searchFor">
+                          <button type="button" name="search-button" id="search-button"
+                                  class="btn btn-primary btn-sm">search</button>
+                      </div>
                   </div>
               </div>
           </form>
-        </div>
         <div class="row align-items-center" id="fellows">
         </div>
       </div>

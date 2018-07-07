@@ -86,40 +86,68 @@ header.masthead .masthead-content .masthead-subheading {
 }
 
 .bg-primary {
-  background-color: #1786fb !important;
+    background-color: #1786fb !important;
 }
 
 .btn-primary {
-  background-color: #1786fb;
-  border-color: #1772e4;
+    background-color: #1786fb;
+    border-color: #1772e4;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: rgba(23, 139, 255, 0.92) !important;
-  border-color: #1786fb !important;
+    background-color: rgba(23, 139, 255, 0.92) !important;
+    border-color: #1786fb !important;
+}
+
+.bg-secondary {
+    background-color: #77cbe7 !important;
+}
+
+.btn-secondary {
+    background-color: #77cbe7;
+    border-color: #6bb9d5;
+}
+
+.btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
+    background-color: #7fdaf6 !important;
+    border-color: #77cbe7 !important;
 }
 
 /* Fellow styles */
+.content {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
 #fellows {
 }
 div.fellow {
     position: relative;
-    margin: 1em;
-    padding: 1em;
+    margin: 1rem;
+    padding: 1rem;
     border: 1px solid rgba(23, 134, 251, 0.17);
     background: rgba(23, 134, 251, 0.07);
+    border-radius: 0.5rem;
+}
+div.fellow .idNumber {
+    display: block;
 }
 .text-muted .fellow {
     background: #f6f6f6;
     color: #aaa;
-    border: #eee;
+    border-color: #eee;
 }
 div.fellow span.status {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 1rem;
+    right: 1rem;
 }
-
-.filter-controls {
-    vertical-align: center;
+div.fellow span.status.active {
+    color: #1772e4;
+}
+div.filter-controls {
+    margin-bottom: 0.5rem;
+}
+.filter-controls .btn {
+    margin-left: 0.5rem;
+    width: 4rem;
 }
