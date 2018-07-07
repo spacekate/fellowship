@@ -7,16 +7,32 @@
  */
 
 $(document).ready(function() {
-    $.getJSON("/fellowship/fellows_dataset.json", function(data){
-        var fellow;
-        alert(data[0]);
+    var response = "";
+    var form_data = {
+        username: "",
+        password: "",
+        is_ajax: 1
+    };
 
-        /*
-        $.each(data, function(key, value) {
-            alert("key = " + key + " \nvalue = " + value.toString());
-            fellow = JSON.parse(value);
-            $("#fellows").append(fellow.id);
-        });
-        */
+    $.ajax({
+        type: "POST",
+        url: "/fellowship/fellows_dataset.json",
+        data: form_data,
+        success: function(response)
+        {
+            console.log(response);
+
+            var json_obj = $.parseJSON(response); //parse JSON
+
+            var output="<ul>";
+            for (var i in json_obj)
+            {
+                output+="<li>" + json_obj[i].Language + ",  " + json_obj[i].ID + "</li>";
+            }
+            output+="</ul>";
+
+            $('#fellows').html(output);
+        },
+        dataType: "json"//set to JSON
     });
 });
