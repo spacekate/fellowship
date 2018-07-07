@@ -7,7 +7,7 @@
  */
 
 $(document).ready(function() {
-    $.getJSON("/fellowship/fellows_dataset.json", function(result){
+    $.getJSON("/fellowship/fellows_dataset.json", function(data){
         $.each(result, function(i, field){
             console.log(data);
         });
