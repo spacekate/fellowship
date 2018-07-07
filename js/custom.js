@@ -10,15 +10,14 @@ $(document).ready(function() {
     $.getJSON("/fellowship/fellows_dataset.json", function(data){
 
         $.each(data, function() {
-            var fellow = $("div", { "id": this["id"]});
-            $("#fellows").append(fellow);
+            $("#fellows").append($("div", { "id": this["id"]}));
 
-            $(fellow).append(
+            $("#"+this["id"]).append(
                 $("<p>")
                     .text(this['name']['first'] + " " + this['name']['last'])
             );
 
-            $(fellow).append(
+            $("#"+this["id"]).append(
                 $("<span>")
                     .text(this['age'])
             );
