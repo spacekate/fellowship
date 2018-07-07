@@ -80,7 +80,9 @@ $(document).ready(function() {
         refreshFellows(filteredData);
     });
 
-    $("#filter-button").click(function() {
+    $("#filter").submit(function() {
+        event.preventDefault();
+
         var filterType = ($("#filterBy option:selected").val());
         // clear search box to minimize confustion
         $("#searchFor").val("");
