@@ -57,10 +57,10 @@
 
     <section>
       <div class="container content">
-          <form name="filter">
-              <div class="row">
-                  <div class="col-md-6 col-lg-5 offset-lg-1">
-                      <div class="input-group filter-controls">
+          <div class="row">
+              <div class="col-md-6 col-lg-5 offset-lg-1">
+                  <form name="filter" id="filter">
+                  <div class="input-group filter-controls">
                           <select class="form-control form-control-sm" name="filterBy" id="filterBy">
                               <option value="0">-- filter by --</option>
                               <option value="fellowship">Fellowship</option>
@@ -69,17 +69,19 @@
                           </select>
                           <button type="button" name="filter-button" id="filter-button"
                                   class="btn btn-secondary btn-sm">filter</button>
-                      </div>
                   </div>
-                  <div class="col-md-6 col-lg-5">
-                      <div class="input-group filter-controls">
-                          <input type="text" class="form-control form-control-sm" name="seachFor" id="searchFor">
-                          <button type="button" name="search-button" id="search-button"
-                                  class="btn btn-primary btn-sm">search</button>
-                      </div>
-                  </div>
+              </form>
               </div>
-          </form>
+              <div class="col-md-6 col-lg-5">
+                  <form name="search" id="search">
+                  <div class="input-group filter-controls">
+                        <input type="text" class="form-control form-control-sm" name="seachFor" id="searchFor">
+                        <button type="submit" name="search-button" id="search-button"
+                          class="btn btn-primary btn-sm">search</button>
+                  </div>
+              </form>
+              </div>
+          </div>
         <div class="row align-items-center" id="fellows">
         </div>
       </div>
