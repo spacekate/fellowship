@@ -16,6 +16,7 @@ $(document).ready(function() {
             var age = $("<p>").text("age: " + fellowData['age']);
             var email = $("<a>").text(fellowData['email']).attr("href", "mailto:" + fellowData['email']);
             var about = $("<p>").text(fellowData['about']);
+            alert(fellowData['isActive']);
             if (fellowData['isActive'] != true) {
                 $(newFellow).addClass("inactive");
             }
