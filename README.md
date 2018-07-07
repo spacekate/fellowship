@@ -27,4 +27,3 @@ sorted by the chosen filter.
     * Name (first and last)
     * Fellowship, and
     * About
-
