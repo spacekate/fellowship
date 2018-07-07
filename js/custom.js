@@ -11,7 +11,7 @@ $(document).ready(function() {
         var fellow;
 
         $.each(fellows, function(key, value) {
-            alert(value);
+            alert("key = " + key + " /nvalue = " + value);
             fellow = jQuery.parseJSON(value);
             console.log(fellow);
             //$("#fellows").append(fellow.id);
