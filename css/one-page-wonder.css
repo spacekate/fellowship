@@ -154,7 +154,6 @@ header.masthead .bg-circle-4 {
 
 /* Fellow styles */
 #fellows {
-    display: table-column;
     vertical-align: top;
 }
 div.fellow {
@@ -164,5 +163,5 @@ div.fellow {
 }
 .text-muted .fellow {
     background: #f6f6f6;
-    color: #bbb;
+    color: #aaa;
 }
