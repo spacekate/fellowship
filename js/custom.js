@@ -3,7 +3,7 @@
  * Author: Kate Currie
  * Created: 7 July 2018
  *
- * Description: Read and display a json dataset. Add filters
+ * Description: Read and display a json dataset with filters and search box.
  */
 
 $(document).ready(function() {
@@ -11,6 +11,7 @@ $(document).ready(function() {
         var fellow;
 
         $.each(fellows, function(key, value) {
+            alert(value);
             fellow = jQuery.parseJSON(value);
             console.log(fellow);
             //$("#fellows").append(fellow.id);
