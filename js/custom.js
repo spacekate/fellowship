@@ -9,7 +9,7 @@
 $(document).ready(function() {
     $.fn.extend( {
         appendFellow: function (fellowData) {
-            var newFellow = $("<div>").attr("id", fellowData["id"]).addClass("col-md-6 col-lg-4");
+            var newFellow = $("<div>").attr("id", fellowData["id"]).addClass("col-md-6 col-lg-4 align-top");
             var fellowBody = $("<div>").addClass("fellow");
             var name = $("<p>").text(fellowData['name']['first'] + " " + fellowData['name']['last']);
             var fellowship = $("<p>").text(fellowData['fellowship']);
