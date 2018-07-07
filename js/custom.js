@@ -7,10 +7,13 @@
  */
 
 $(document).ready(function() {
-    var fellowship_data;
+    var fellowship_data; // variable to store data
 
     $.fn.extend( {
-        // function to output json data as html dom elements
+        /*
+         * appendFellow function
+         * Display fellow data as html dom elements
+         */
         appendFellow: function (fellowData) {
             var newFellow = $("<div>")
                 .attr("id", fellowData["id"])
@@ -58,13 +61,18 @@ $(document).ready(function() {
         }
     });
 
-    // on page load, read the fellows_dataset json and output to dom
+    /*
+     * On page load, read the fellows_dataset json and output to dom
+     */
     $.getJSON("/fellowship/fellows_dataset.json", function(data){
         fellowship_data = data;
         refreshFellows(fellowship_data);
     });
 
-    // search function
+    /*
+     * Search function
+     * Create an array containing the matching data and refresh display
+     */
     $("#search").submit(function(event) {
         // ensure page does not reload when form is submitted
         event.preventDefault();
@@ -85,7 +93,10 @@ $(document).ready(function() {
         refreshFellows(filteredData);
     });
 
-    // filter function
+    /*
+     * Filter function
+     * Sort the existing data array by the given filter and refresh display
+     */
     $("#filter").submit(function(event) {
         // ensure page does not reload when form is submitted
         event.preventDefault();
@@ -112,6 +123,10 @@ $(document).ready(function() {
         }
     });
 
+    /*
+     * Refresh display
+     * This function clears and repopulates the "fellows" dom element
+     */
     function refreshFellows (data) {
         $("#fellows").empty();
         $.each(data, function() {
@@ -119,7 +134,10 @@ $(document).ready(function() {
         });
     }
 
-
+    /*
+     * Sort Functions
+     * The following four functions sort the data by the relevant criteria
+     */
     function fellowshipSort(a, b) {
         return attributeSort(a["fellowship"], b["fellowship"]);
     }
