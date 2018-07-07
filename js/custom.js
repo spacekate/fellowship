@@ -27,7 +27,7 @@ $(document).ready(function() {
             var output="<ul>";
             for (var i in json_obj)
             {
-                output+="<li>" + json_obj[i].Language + ",  " + json_obj[i].ID + "</li>";
+                output+="<li>" + json_obj[i].id + ",  " + json_obj[i].fellowship + "</li>";
             }
             output+="</ul>";
 
