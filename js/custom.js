@@ -7,7 +7,7 @@
  */
 
 $(document).ready(function() {
-    $.getJSON("../fellows_dataset.json", function(result){
+    $.getJSON("fellows_dataset.json", function(result){
         $.each(result, function(i, field){
             console.log(data);
         });
