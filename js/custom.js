@@ -15,12 +15,12 @@ $(document).ready(function() {
             );
 
             $(fellow).append(
-                $("<div>")
+                $("<p>")
                     .text(this['name']['first'] + " " + this['name']['last'])
             );
 
             $(fellow).append(
-                $("<div>")
+                $("<span>")
                     .text(this['age'])
             );
 
