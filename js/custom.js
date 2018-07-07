@@ -8,6 +8,8 @@
 
 $(document).ready(function() {
     $.getJSON("/fellowship/fellows_dataset.json", function(fellows){
-        console.log(fellows);
+        $.each(fellows, function(i, item) {
+            console.log(item);
+        });
     });
 });
