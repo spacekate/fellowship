@@ -24,6 +24,7 @@ $(document).ready(function() {
             output+="</ul>";
 
             $('#fellows').html(output);
+            alert(response);
         },
         dataType: "json"
     });
