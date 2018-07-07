@@ -10,16 +10,21 @@ $(document).ready(function() {
     $.getJSON("/fellowship/fellows_dataset.json", function(data){
 
         $.each(data, function() {
-
-            $("#fellows").append(
-                $("<div>")
-                    .text(this['name']['first'])
+            var fellow = $("div")
+                .attr("id", this["id"])
             );
 
-            $("#fellows").append(
+            $(fellow).append(
+                $("<div>")
+                    .text(this['name']['first'] + " " + this['name']['last'])
+            );
+
+            $(fellow).append(
                 $("<div>")
                     .text(this['age'])
             );
+
+            $("#fellows").append(fellow);
         });
     });
 });
