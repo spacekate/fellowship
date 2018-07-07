@@ -61,7 +61,7 @@ $(document).ready(function() {
         refreshFellows(fellowship_data);
     });
 
-    $("#search").submit(function() {
+    $("#search").submit(function(event) {
         event.preventDefault();
 
         var filteredData = new Array();
