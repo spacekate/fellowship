@@ -13,7 +13,13 @@ $(document).ready(function() {
 
             $("#fellows").append(
                 $("<div>")
-                    .text(this['age']));
+                    .text(this['name']['first'])
+            );
+
+            $("#fellows").append(
+                $("<div>")
+                    .text(this['age'])
+            );
         });
     });
 });
