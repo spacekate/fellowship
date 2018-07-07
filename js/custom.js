@@ -8,8 +8,12 @@
 
 $(document).ready(function() {
     $.getJSON("/fellowship/fellows_dataset.json", function(data){
-        $.each(data, function(i, item) {
-            $("#fellows").append(jQuery.parseJSON(item.id[i]));
+        var fellows = jQuery.parseJSON(data);
+        console.log(fellows);
+        /*
+        $.each(fellows, function(i, item) {
+            $("#fellows").append(jQuery.parseJSON(item.id));
         });
+        */
     });
 });
