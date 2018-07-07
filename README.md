@@ -1,6 +1,10 @@
 # CfA Fellowship - Frontend Code Challenge
 
-This is a single page website created by Kate Currie to satisfy the [CfA Fellowship Frontend Code Challenge](https://docs.google.com/document/d/1-Mub-O8dIvT2GamDlfcWmzASMIvDCSnPGaNw6tK4Q40/edit)
+This is a single page website created to satisfy the [CfA Fellowship Frontend Code Challenge](https://docs.google.com/document/d/1-Mub-O8dIvT2GamDlfcWmzASMIvDCSnPGaNw6tK4Q40/edit)
+
+## Author
+
+[Kate Currie](mailto:kate@currie.com.au)
 
 ## View
 
