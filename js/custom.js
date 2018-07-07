@@ -13,7 +13,7 @@ $(document).ready(function() {
 
             $("#fellows").append(
                 $("<div>")
-                    .text(this['name']['first'])
+                    .text(this['name']['first'] + " " + this['name']['last'])
             );
 
             $("#fellows").append(
