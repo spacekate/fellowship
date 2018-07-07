@@ -7,8 +7,6 @@
  */
 
 $(document).ready(function() {
-    var response = "";
-
     $.ajax({
         url: "/fellowship/fellows_dataset.json",
         type: "POST",
