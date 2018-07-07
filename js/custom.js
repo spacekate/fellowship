@@ -9,9 +9,15 @@
 $(document).ready(function() {
     $.fn.extend( {
         appendFellow: function (fellowData) {
-            var name = $("<div>").text(fellowData['name']['first'] + " " + fellowData['name']['last']);
-            var age = $("<div>").text(fellowData['age']);
-            $(this).append(name).append(age);
+            var name = $("<p>").text(fellowData['name']['first'] + " " + fellowData['name']['last']);
+            var fellowship = $("<p>").text(fellowData['fellowship']);
+            var age = $("<p>").text(fellowData['age']);
+            var email = $("<a>").text(fellowData['email']).href("mailto:" + fellowData['email']);
+            var isActive = false;
+            if (fellowData['isActive'] == "true") {
+                isActive = true;
+            }
+            $(this).append(name).append(age).append(email);
         }
     });
 
