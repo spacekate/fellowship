@@ -9,7 +9,7 @@
 $(document).ready(function() {
     $.fn.extend( {
         appendFellow: function (fellowData) {
-            this.append($("<div>").text(fellowData['name']['first'] + " " + fellowData['name']['last']));
+            $(this).append($("<div>").text(fellowData['name']['first'] + " " + fellowData['name']['last']));
         }
     });
 
