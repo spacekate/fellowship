@@ -27,7 +27,7 @@ $(document).ready(function() {
                 .text(fellowData['about']);
 
             if (!fellowData['isActive']) {
-                $(newFellow).addClass("muted");
+                $(newFellow).addClass("text-muted");
             }
 
             $(newFellow).append(fellowBody);
