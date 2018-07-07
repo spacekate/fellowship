@@ -11,15 +11,14 @@ $(document).ready(function() {
 
         $.each(data, function() {
 
-            $("#fellows").append(
-                $("<div>")
-                    .text(this['name']['first'] + " " + this['name']['last'])
-            );
 
-            $("#fellows").append(
-                $("<div>")
-                    .text(this['age'])
-            );
+            $("#fellows").append(this.createFellow());
         });
     });
+});
+
+$.fn.extend( {
+    createFellow: function () {
+        return $("<div>").text(this['name']['first'] + " " + this['name']['last']);
+    }
 });
