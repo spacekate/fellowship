@@ -11,8 +11,7 @@ $(document).ready(function() {
 
         $.each(data, function() {
             var fellow = $("div")
-                .attr("id", this["id"])
-            );
+                .attr("id", this["id"]);
 
             $(fellow).append(
                 $("<p>")
