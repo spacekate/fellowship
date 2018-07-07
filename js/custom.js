@@ -8,7 +8,9 @@
 
 $(document).ready(function() {
     var fellowship_data;
+
     $.fn.extend( {
+        // function to output json data as html dom elements
         appendFellow: function (fellowData) {
             var newFellow = $("<div>")
                 .attr("id", fellowData["id"])
@@ -56,15 +58,18 @@ $(document).ready(function() {
         }
     });
 
+    // on page load, read the fellows_dataset json and output to dom
     $.getJSON("/fellowship/fellows_dataset.json", function(data){
         fellowship_data = data;
         refreshFellows(fellowship_data);
     });
 
+    // search function
     $("#search").submit(function(event) {
+        // ensure page does not reload when form is submitted
         event.preventDefault();
 
-        var filteredData = new Array();
+        var filteredData = []; // initialize empty array for search results
         var searchTerm = $("#searchFor").val().toLowerCase();
 
 
@@ -80,11 +85,13 @@ $(document).ready(function() {
         refreshFellows(filteredData);
     });
 
+    // filter function
     $("#filter").submit(function(event) {
+        // ensure page does not reload when form is submitted
         event.preventDefault();
 
-        var filterType = ($("#filterBy option:selected").val());
-        // clear search box to minimize confustion
+        var filterType = ($("select#filterBy option:selected").val());
+        // clear search box to minimize confusion
         $("#searchFor").val("");
 
         switch (filterType) {
