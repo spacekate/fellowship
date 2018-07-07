@@ -9,7 +9,7 @@
 $(document).ready(function() {
     $.getJSON("/fellowship/fellows_dataset.json", function(data){
 
-        $.each(fellows, function() {
+        $.each(data, function() {
             $("#fellows").append(this['id']);
         });
     });
