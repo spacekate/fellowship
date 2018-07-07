@@ -13,7 +13,7 @@ $(document).ready(function() {
             var name = $("<p>").text(fellowData['name']['first'] + " " + fellowData['name']['last']);
             var fellowship = $("<p>").text(fellowData['fellowship']);
             var age = $("<p>").text(fellowData['age']);
-            var email = $("<a>").text(fellowData['email']).href("mailto:" + fellowData['email']);
+            var email = $("<a>").text(fellowData['email']).attr("href", "mailto:" + fellowData['email']);
             var about = $("<p>").text(fellowData['about']);
             var isActive = false;
             if (fellowData['isActive'] == "true") {
