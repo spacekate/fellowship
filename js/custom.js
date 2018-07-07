@@ -12,7 +12,7 @@ $(document).ready(function() {
 
         $.each(data, function(key, value) {
             alert("key = " + key + " \nvalue = " + value.toString());
-            fellow = jQuery.parseJSON(value);
+            fellow = JSON.parse(value);
             $("#fellows").append($(fellow).id);
         });
     });
