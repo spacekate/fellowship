@@ -154,11 +154,10 @@ header.masthead .bg-circle-4 {
 
 /* Fellow styles */
 #fellows {
-    display: table;
+    display: table-column;
     vertical-align: top;
 }
 div.fellow {
-    display: table-cell;
     margin: 1em;
     padding: 1em;
     border: 1px solid #eee;
