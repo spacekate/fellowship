@@ -8,12 +8,11 @@
 
 $(document).ready(function() {
     $.getJSON("/fellowship/fellows_dataset.json", function(data){
-        var fellows = jQuery.parseJSON(data);
-        console.log(fellows);
-        /*
-        $.each(fellows, function(i, item) {
-            $("#fellows").append(jQuery.parseJSON(item.id));
+        var fellow;
+
+        $.each(fellows, function(key, value) {
+            fellow = jQuery.parseJSON(value);
+            $("#fellows").append(fellow.id);
         });
-        */
     });
 });
