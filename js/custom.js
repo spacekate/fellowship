@@ -11,7 +11,7 @@ $(document).ready(function() {
         appendFellow: function (fellowData) {
             var newFellow = $("<div>")
                 .attr("id", fellowData["id"])
-                .addClass("col-lg-10");
+                .addClass("col-lg-10 offset-lg-1");
             var fellowBody = $("<div>")
                 .addClass("fellow");
             var name = $("<p>")
