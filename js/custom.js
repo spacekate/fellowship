@@ -26,15 +26,16 @@ $(document).ready(function() {
             var about = $("<p>")
                 .text(fellowData['about']);
 
-            if (fellowData['isActive'] && fellowData['isActive'] == "false") {
+            if (!fellowData['isActive']) {
                 $(newFellow).addClass("inactive");
             }
+
             $(newFellow).append(fellowBody);
             $(fellowBody)
                 .append(name)
                 .append(fellowship)
-                .append(age).append(email)
-                .append(isActive)
+                .append(age)
+                .append(email)
                 .append(about);
             $(this).append(newFellow);
         }
