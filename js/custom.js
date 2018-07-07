@@ -36,7 +36,7 @@ $(document).ready(function() {
                 .append(fellowship)
                 .append(age)
                 .append(about)
-                .append($("<p>").text("email: " + email));
+                .append($("<p>").text("email: ").append(email));
             $(this).append(newFellow);
         }
     });

@@ -132,5 +132,5 @@ div.fellow {
 
 .filter-controls {
     vertical-align: center;
-    box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
+    background: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
 }
