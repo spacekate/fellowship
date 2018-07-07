@@ -9,7 +9,7 @@
 $(document).ready(function() {
     $.fn.extend( {
         createFellow: function () {
-            return $("<div>").text(this['name']['first'] + " " + this['name']['last']);
+            return $("<div>").text($(this)['name']['first'] + " " + $(this)['name']['last']);
         }
     });
 
