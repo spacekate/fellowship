@@ -16,9 +16,8 @@ $(document).ready(function() {
             var age = $("<p>").text("age: " + fellowData['age']);
             var email = $("<a>").text(fellowData['email']).attr("href", "mailto:" + fellowData['email']);
             var about = $("<p>").text(fellowData['about']);
-            var isActive = "not active";
-            if (fellowData['isActive'] == "true") {
-                isActive = "active";
+            if (fellowData['isActive'] != true) {
+                $(newFellow).addClass("inactive");
             }
             $(newFellow).append(fellowBody);
             $(fellowBody).append(name).append(fellowship).append(age).append(email).append(isActive).append(about);

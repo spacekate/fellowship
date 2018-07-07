@@ -153,8 +153,14 @@ header.masthead .bg-circle-4 {
 }
 
 /* Fellow styles */
+#fellows {
+}
 div.fellow {
     margin: 1em;
     padding: 1em;
     border: 1px solid #eee;
+}
+div.inactive {
+    background: #eee;
+    color: #999;
 }
