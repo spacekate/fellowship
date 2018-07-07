@@ -161,6 +161,6 @@ div.fellow {
     border: 1px solid #eee;
 }
 div.inactive .fellow {
-    background: #eee;
-    color: #999;
+    background: #f6f6f6;
+    color: #ccc;
 }
