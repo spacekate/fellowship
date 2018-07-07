@@ -12,7 +12,6 @@ $(document).ready(function() {
 
         $.each(data, function(key, value) {
             alert("key = " + key + " \nvalue = " + value);
-            fellow = jQuery.parseJSON(value);
             $("#fellows").append(fellow.id);
         });
     });
