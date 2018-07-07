@@ -11,9 +11,9 @@ $(document).ready(function() {
         appendFellow: function (fellowData) {
             var newFellow = $("<div>")
                 .attr("id", fellowData["id"])
-                .addClass("col-md-6 col-lg-4");
+                .addClass("col-lg-10");
             var fellowBody = $("<div>")
-                .addClass("fellow align-top");
+                .addClass("fellow");
             var name = $("<p>")
                 .text(fellowData['name']['first'] + " " + fellowData['name']['last']);
             var fellowship = $("<p>")
