@@ -56,7 +56,7 @@ $(document).ready(function() {
         }
     });
 
-    $.getJSON("../fellows_dataset.json", function(data){
+    $.getJSON("/fellowship/fellows_dataset.json", function(data){
         fellowship_data = data;
         refreshFellows(fellowship_data);
     });
