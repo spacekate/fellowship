@@ -1,4 +1,4 @@
-/* Custom JavaScript
+/* CfA Fellowship Code Test JavaScript
  *
  * Author: Kate Currie
  * Created: 7 July 2018
