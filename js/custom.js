@@ -15,10 +15,10 @@ $(document).ready(function() {
             $("#fellows").append(this.createFellow());
         });
     });
-});
 
-$.fn.extend( {
-    createFellow: function () {
-        return $("<div>").text(this['name']['first'] + " " + this['name']['last']);
-    }
+    $.fn.extend( {
+        createFellow: function () {
+            return $("<div>").text(this['name']['first'] + " " + this['name']['last']);
+        }
+    });
 });
