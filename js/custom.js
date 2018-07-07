@@ -8,7 +8,6 @@
 
 $(document).ready(function() {
     $.getJSON("/fellowship/fellows_dataset.json", function(data){
-        var fellows = $.parseJSON(data);
 
         $.each(fellows, function() {
             $("#fellows").append(this['id']);
