@@ -8,21 +8,15 @@
 
 $(document).ready(function() {
     var response = "";
-    var form_data = {
-        username: "",
-        password: "",
-        is_ajax: 1
-    };
 
     $.ajax({
-        type: "POST",
         url: "/fellowship/fellows_dataset.json",
-        data: form_data,
+        type: "POST",
         success: function(response)
         {
             console.log(response);
 
-            var json_obj = $.parseJSON(response); //parse JSON
+            var json_obj = $.parseJSON(response);
 
             var output="<ul>";
             for (var i in json_obj)
@@ -33,6 +27,6 @@ $(document).ready(function() {
 
             $('#fellows').html(output);
         },
-        dataType: "json"//set to JSON
+        dataType: "json"
     });
 });
