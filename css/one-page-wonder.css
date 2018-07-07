@@ -164,3 +164,8 @@ div.fellow {
     background: #f6f6f6;
     color: #aaa;
 }
+
+.filter-controls {
+    vertical-align: center;
+    box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
+}
