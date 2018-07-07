@@ -7,18 +7,16 @@
  */
 
 $(document).ready(function() {
-    $.getJSON("/fellowship/fellows_dataset.json", function(data){
-
-        $.each(data, function() {
-
-
-            $("#fellows").append(this.createFellow());
-        });
-    });
-
     $.fn.extend( {
         createFellow: function () {
             return $("<div>").text(this['name']['first'] + " " + this['name']['last']);
         }
+    });
+
+    $.getJSON("/fellowship/fellows_dataset.json", function(data){
+
+        $.each(data, function() {
+            $("#fellows").append(this.createFellow());
+        });
     });
 });
