@@ -8,7 +8,7 @@
 
 $(document).ready(function() {
     $.getJSON("/fellowship/fellows_dataset.json", function(data){
-        $.each(result, function(i, field){
+        $.each(data, function(i, field){
             console.log(data);
         });
     });
