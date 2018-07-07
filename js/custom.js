@@ -8,15 +8,15 @@
 
 $(document).ready(function() {
     $.fn.extend( {
-        createFellow: function () {
-            return $("<div>").text($(this)['name']['first'] + " " + $(this)['name']['last']);
+        appendFellow: function (fellowData) {
+            this.append($("<div>").text(fellowData['name']['first'] + " " + fellowData['name']['last']));
         }
     });
 
     $.getJSON("/fellowship/fellows_dataset.json", function(data){
 
         $.each(data, function() {
-            $("#fellows").append($(this).createFellow());
+            $("#fellows").appendFellow(this);
         });
     });
 });
